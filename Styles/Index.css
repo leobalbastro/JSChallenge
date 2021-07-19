@@ -1,0 +1,450 @@
+/* Este será el css que irá en la pagina principal, quizás las demás paginas compartan o no este template.*/
+
+body {
+    background-color: black;
+    /* background-image: repeating-linear-gradient(135deg, hsla(0,0%,100%,.2),hsla(0,0%,100%,.2) 2px,transparent 0,transparent 20px); */
+    color: white;
+}
+/* Para desactivar las flechitas del input  en todo el html.*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+input[type=number] { -moz-appearance:textfield; }
+/* Header */
+
+.Logo{
+    display: flex;
+    width: auto;
+    /* height: 15vh; */
+    justify-content: center;
+    align-items: center;
+}
+.Logo img{
+    width: max-content;
+    margin-right: 10px;
+    height: max-content;
+    /* font-size: 14px; */
+}
+.Logo p{
+    font-size: 60px;
+}
+
+
+/* Body */
+
+
+.mainContent {
+    display: flex;
+    /* height: 70vh; */
+}
+
+.wrap{
+    width: 100%;
+}
+
+.tabs{    
+    display: flex;
+    /* flex-flow: wrap; */
+    justify-content: space-between;    
+    background-color: orange;
+    flex-wrap: nowrap;
+    padding: 0.5vw;
+    margin: 0;
+    text-align: center;
+
+    /* height: 300px; */
+}
+ul.tabs li{
+    width: max-content;
+    list-style: none;
+    /* margin: 10px; */
+}
+ul.tabs li a{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border: 2px solid orange;
+    /* border-radius: 5px; */
+    /* background-color: rgba(255, 255, 255, 0.473); */
+    /* padding: 1px; */
+    display: flex;
+    align-items: center;
+    font-size: 2.79vw;
+    /* justify-content: space-between; */
+    /* border-radius: 0; */
+    margin: 0;
+    height: 50px;
+}
+.tabs__figures{    
+    display: flex;
+    justify-content: space-between;    
+    background-color: orange;
+    flex-wrap: nowrap;
+    padding: 0.5vw;
+    margin: 0;
+    text-align: center;
+}
+ul.tabs__figures li{
+    width: max-content;
+    list-style: none;
+    justify-content: space-between;
+}
+ul.tabs__figures li a{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border: 2px solid orange;
+    /* border-radius: 5px; */
+    /* background-color: rgba(255, 255, 255, 0.473); */
+    /* padding: 1px; */
+    display: flex;
+    align-items: center;
+    font-size: 2.79vw;
+    /* justify-content: space-between; */
+    /* border-radius: 0; */
+    margin: 0 10vw;
+    height: 50px;
+}
+ul.tabs__figures li a:hover{
+    color: rgb(0, 0, 0);
+    /* background: orange; */
+    border-color: black;
+    background-color: black;
+    color: orange;
+}
+
+
+ul.tabs li a:hover{
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+
+/* Comienzo de Formulario Cuadrado*/
+.Cuadrado{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.Cuadrado__form{
+    border: 2px solid orange;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 1vw;
+    width: 100%;
+    text-align: center;
+    font-size: 4vw;
+}
+.Cuadrado__inputs{
+    margin-bottom: 10px;
+}
+.Cuadrado__form--input{
+    font-size: 4vw;
+    background-color: transparent;
+    border: 2px solid orange;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    margin-left: 0.5vw;
+}
+.Cuadrado__form--buttons{
+    display: flex;
+    padding: 0.8vw;
+    justify-content: space-between;
+}
+.Cuadrado__form button{
+    width: 49%;
+    font-size: 4vw;
+    background-color: transparent;
+    color: white;
+    border-color: orange;
+    border-radius: 0.5vw;
+}
+.Cuadrado__form button:hover{
+    background-color: rgba(255, 166, 0, 0.473);
+    border-color: black;
+}
+.Cuadrado__form button:active{
+    background-color: orange;
+    border-color: black;
+    color:black
+}
+.Cuadrado__form p{
+    background-color: orange;
+    color: black;
+    margin: 0;
+    font-size: 4vw;
+}
+/* Fin de Formulario Cuadrado*/
+
+/*Comienzo Formulario Triangulo*/
+
+.Triangulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.Triangulo__form{
+    border: 2px solid orange;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 4vw;
+}
+.input1 , .input2{
+    margin-bottom: 1vh;
+    display: flex;
+    justify-content: space-between;
+    /* width: 0.05vh; */
+}
+
+.input1 label{
+    margin-right: 1vw;
+    text-align: justify;
+}
+.input2 label{
+    margin-right: 1vw;
+    text-align: justify;
+}
+
+.Triangulo__form--input1{
+    font-size: 4vw;
+    background-color: transparent;
+    border: 2px solid orange;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    margin-left: 0.5vw;
+}
+.Triangulo__form--input2{
+    font-size: 4vw;
+    background-color: transparent;
+    border: 2px solid orange;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    margin-left: 0.5vw;
+}
+
+.Triangulo__form--buttons{
+    display: flex;
+    padding: 0.8vw;
+    justify-content: space-between;
+}
+.Triangulo__form--buttons button{
+    width: 49%;
+    font-size: 4vw;
+    background-color: transparent;
+    color: white;
+    border-color: orange;
+    border-radius: 0.5vw;
+}
+.Triangulo__form button:hover{
+    background-color: rgba(255, 166, 0, 0.473);
+    border-color: black;
+}
+.Triangulo__form button:active{
+    background-color: orange;
+    border-color: black;
+    color:black
+}
+.Triangulo__form p{
+    background-color: orange;
+    color: black;
+    margin: 0;
+    font-size: 4vw;
+}
+
+/*Fin Formulario Triangulo*/
+
+/*Comienzo Formulario Circulo*/
+
+.Circulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.Circulo__form{
+    border: 2px solid orange;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 4vw;
+}
+.Circulo__input{
+    font-size: 4vw;
+    text-align: center;
+    margin-bottom: 10vh;
+    background-color: transparent;
+    border-color: orange;
+    border-radius: 5px;
+    color:white;
+}
+.Circulo__form--buttons{
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+}
+.Circulo__form--buttons button{
+    width: 49%;
+    font-size: 4vw;
+    background-color: transparent;
+    color: white;
+    border-color: orange;
+    border-radius: 0.5vw;
+}
+.Circulo__form--buttons button:hover{
+    background-color: rgba(255, 166, 0, 0.507);
+}
+.Circulo__form--buttons button:active{
+    background-color: orange;
+    color: black;
+}
+.Circulo__form p{
+    margin: 2px 0;
+    border: 2px solid;
+    background-color: orange;
+    color: black;
+}
+/*Fin Formulario Circulo*/
+
+
+/*Comienzo Formulario Taller 2*/
+.TallerJS2__form{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid orange;
+    margin-top: 2.5vh;
+    font-size: 4vw;
+    padding: 2.5vw;
+}
+
+.TallerJS2__form input{
+    text-align: center;
+    font-size: 4vw;
+    background-color: transparent;
+    margin-bottom: 1vw;
+    color: white;
+    border: 2px solid orange;
+}
+.TallerJS2__form--input1{
+    display: flex;
+    justify-content: space-between;
+}
+.TallerJS2__form--input1:focus{
+    outline: none;
+}
+
+.TallerJS2__form--input2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.TallerJS2__form--button{
+    width: 100%;
+    font-size: 4vw;
+    background-color: transparent;
+    color: white;
+    border-color: orange;
+    border-radius: 0.5vw;
+    margin-bottom: 2vh;
+}
+.TallerJS2__form--button:hover{
+    background-color: rgba(255, 166, 0, 0.486);
+}
+.TallerJS2__form--button:active{
+    background-color: orange;
+    color: black;
+}
+.TallerJS2__form--resultado{
+    margin: 0;
+    background-color: orange;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+footer ul{
+    display: flex;
+    margin: 10px;
+}
+
+footer ul li{
+    display: flex;
+    /* justify-content: space-between; */
+    /* flex-wrap: nowrap; */
+    margin-left: 10px;
+    align-items: center;
+}
+footer ul img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+footer ul p{
+    font-size: 14px;
+    margin-right: 10px;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    color : cyan;
+}
+
+@media screen and (max-width: 700px){
+	ul.tabs li{
+		width: none;
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+}
+
+@media screen and (max-width: 450px){
+	ul.tabs li a{
+		padding: 15px 0px;
+	}
+
+	ul.tabs li a .tab-text{
+		display: none;
+	}
+
+	.secciones article{
+		padding: 20px;
+	}
+}
