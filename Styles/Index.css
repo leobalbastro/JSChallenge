@@ -3,8 +3,12 @@
 body {
     background-color: black;
     /* background-image: repeating-linear-gradient(135deg, hsla(0,0%,100%,.2),hsla(0,0%,100%,.2) 2px,transparent 0,transparent 20px); */
-    color: white;
+    color: #eaf4e6;
 }
+form{
+    background-color: #0877cc7c;
+}
+
 /* Para desactivar las flechitas del input  en todo el html.*/
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -23,13 +27,14 @@ input[type=number] { -moz-appearance:textfield; }
 }
 .Logo img{
     width: max-content;
-    margin-right: 10px;
+    margin-right: 1rem;
     height: max-content;
     /* font-size: 14px; */
 }
 .Logo p{
-    font-size: 60px;
+    font-size: 4rem;
 }
+
 
 
 /* Body */
@@ -42,20 +47,56 @@ input[type=number] { -moz-appearance:textfield; }
 
 .wrap{
     width: 100%;
+    /* border: 2px solid #e7b732; */
+    border-radius: 5px;
 }
 
 .tabs{    
     display: flex;
     /* flex-flow: wrap; */
     justify-content: space-between;    
-    background-color: orange;
+    background-color: #0877cc7c;
     flex-wrap: nowrap;
     padding: 0.5vw;
     margin: 0;
     text-align: center;
-
-    /* height: 300px; */
+    border-radius: 5px;
 }
+.tabs select{
+        display: flex;
+        /* flex-flow: wrap; */
+        justify-content: space-between;   
+        background-color: #033a64;
+        flex-wrap: nowrap;
+        padding: 0.5vw;
+        margin: 0;
+        text-align: center;
+        border-radius: 5px;
+        
+        font-size: 2rem;
+        border: 1px solid #0CB7F2;
+        color: white;
+}
+.tabs select option{
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        border: 1px solid #0CB7F2;
+        background-color: #033a64;
+        border-radius: 5px;
+        /* border-radius: 5px; */
+        /* background-color: rgba(255, 255, 255, 0.473); */
+        /* padding: 1px; */
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        /* justify-content: space-between; */
+        /* border-radius: 0; */
+        margin: 0;
+        height: 50px;
+    
+}
+
 ul.tabs li{
     width: max-content;
     list-style: none;
@@ -64,62 +105,53 @@ ul.tabs li{
 ul.tabs li a{
     text-decoration: none;
     text-align: center;
-    color: black;
-    border: 2px solid orange;
+    color: white;
+    border: 1px solid #0CB7F2;
+    border-radius: 5px;
     /* border-radius: 5px; */
     /* background-color: rgba(255, 255, 255, 0.473); */
     /* padding: 1px; */
     display: flex;
     align-items: center;
-    font-size: 2.79vw;
+    font-size: 2.4rem;
     /* justify-content: space-between; */
     /* border-radius: 0; */
     margin: 0;
     height: 50px;
 }
-.tabs__figures{    
-    display: flex;
-    justify-content: space-between;    
-    background-color: orange;
-    flex-wrap: nowrap;
-    padding: 0.5vw;
-    margin: 0;
-    text-align: center;
+ul.tabs li a:hover{
+    /* background-color: #0CB7F2; */
+    color:black;
 }
-ul.tabs__figures li{
+
+ul.tabs__figures{
+    display: flex;
+    font-size: 2.4rem;
+    /* justify-content: left; */
+    flex-direction: column;
+    margin: 0;
+    align-items: left;
     width: max-content;
-    list-style: none;
-    justify-content: space-between;
 }
-ul.tabs__figures li a{
+.link{
+    border: 1px solid #0CB7F2;
+    border-radius: 5px;
+    background-color: #1a81d1;
+    margin-right: 5rem;
+    padding: 0.5rem;
+}
+.link a{
+    color: white;
     text-decoration: none;
-    text-align: center;
+}
+.link a:hover{
     color: black;
-    border: 2px solid orange;
-    /* border-radius: 5px; */
-    /* background-color: rgba(255, 255, 255, 0.473); */
-    /* padding: 1px; */
-    display: flex;
-    align-items: center;
-    font-size: 2.79vw;
-    /* justify-content: space-between; */
-    /* border-radius: 0; */
-    margin: 0 10vw;
-    height: 50px;
 }
-ul.tabs__figures li a:hover{
-    color: rgb(0, 0, 0);
-    /* background: orange; */
-    border-color: black;
-    background-color: black;
-    color: orange;
-}
-
-
+/* 
 ul.tabs li a:hover{
     color: rgb(0, 0, 0);
-    background: rgb(255, 255, 255);
-}
+    background: #1a81d156;
+} */
 
 /* Comienzo de Formulario Cuadrado*/
 .Cuadrado{
@@ -128,23 +160,23 @@ ul.tabs li a:hover{
     text-align: center;
 }
 .Cuadrado__form{
-    border: 2px solid orange;
+    border: 1px solid #0CB7F2;
     border-radius: 5px;
     padding: 5px;
     margin-top: 1vw;
     width: 100%;
     text-align: center;
-    font-size: 4vw;
+    font-size: 2.4rem;
 }
 .Cuadrado__inputs{
     margin-bottom: 10px;
 }
 .Cuadrado__form--input{
-    font-size: 4vw;
+    font-size: 2.4rem;
     background-color: transparent;
-    border: 2px solid orange;
+    border: 1px solid #0CB7F2;
     border-radius: 5px;
-    color: white;
+    color: #eaf4e6;
     text-align: center;
     margin-left: 0.5vw;
 }
@@ -155,26 +187,26 @@ ul.tabs li a:hover{
 }
 .Cuadrado__form button{
     width: 49%;
-    font-size: 4vw;
+    font-size: 2.4rem;
     background-color: transparent;
-    color: white;
-    border-color: orange;
+    color: #eaf4e6;
+    border-color: #0CB7F2;
     border-radius: 0.5vw;
 }
 .Cuadrado__form button:hover{
-    background-color: rgba(255, 166, 0, 0.473);
-    border-color: black;
+    background-color:  #0CB7F293;
+    border-color: #0CB7F2;
 }
 .Cuadrado__form button:active{
-    background-color: orange;
-    border-color: black;
+    background-color: #1a81d1;
+    border-color: #0CB7F2;
     color:black
 }
 .Cuadrado__form p{
-    background-color: orange;
-    color: black;
+    background-color: #1a81d1;
+    color: white;
     margin: 0;
-    font-size: 4vw;
+    font-size: 2.4rem;
 }
 /* Fin de Formulario Cuadrado*/
 
@@ -187,12 +219,13 @@ ul.tabs li a:hover{
 }
 
 .Triangulo__form{
-    border: 2px solid orange;
+    border: 1px solid #0CB7F2;
+    /* border: 1px solid #0CB7F2; */
     border-radius: 5px;
     padding: 5px;
     width: 100%;
     text-align: center;
-    font-size: 4vw;
+    font-size: 2.4rem;
 }
 .input1 , .input2{
     margin-bottom: 1vh;
@@ -211,20 +244,20 @@ ul.tabs li a:hover{
 }
 
 .Triangulo__form--input1{
-    font-size: 4vw;
+    font-size: 2.4rem;
     background-color: transparent;
-    border: 2px solid orange;
+    border: 1px solid #0CB7F2;
     border-radius: 5px;
-    color: white;
+    color: #eaf4e6;
     text-align: center;
     margin-left: 0.5vw;
 }
 .Triangulo__form--input2{
-    font-size: 4vw;
+    font-size: 2.4rem;
     background-color: transparent;
-    border: 2px solid orange;
+    border: 1px solid #0CB7F2;
     border-radius: 5px;
-    color: white;
+    color: #eaf4e6;
     text-align: center;
     margin-left: 0.5vw;
 }
@@ -236,26 +269,26 @@ ul.tabs li a:hover{
 }
 .Triangulo__form--buttons button{
     width: 49%;
-    font-size: 4vw;
+    font-size: 2.4rem;
     background-color: transparent;
-    color: white;
-    border-color: orange;
+    color: #eaf4e6;
+    border-color: #0CB7F2;
     border-radius: 0.5vw;
 }
 .Triangulo__form button:hover{
-    background-color: rgba(255, 166, 0, 0.473);
-    border-color: black;
+    background-color:  #0CB7F293;
+    border-color: #0CB7F2;
 }
 .Triangulo__form button:active{
-    background-color: orange;
-    border-color: black;
+    background-color: #1a81d1;
+    border-color: #0CB7F2;
     color:black
 }
 .Triangulo__form p{
-    background-color: orange;
-    color: black;
+    background-color: #1a81d1;
+    color: white;
     margin: 0;
-    font-size: 4vw;
+    font-size: 2.4rem;
 }
 
 /*Fin Formulario Triangulo*/
@@ -268,21 +301,22 @@ ul.tabs li a:hover{
     margin-top: 10px;
 }
 .Circulo__form{
-    border: 2px solid orange;
+    border: 1px solid #0CB7F2;
+    /* border: 1px solid #0CB7F2; */
     border-radius: 5px;
     padding: 5px;
     width: 100%;
     text-align: center;
-    font-size: 4vw;
+    font-size: 2.4rem;
 }
 .Circulo__input{
-    font-size: 4vw;
+    font-size: 2.4rem;
     text-align: center;
     margin-bottom: 10vh;
     background-color: transparent;
-    border-color: orange;
+    border-color: #0CB7F2;
     border-radius: 5px;
-    color:white;
+    color:#eaf4e6;
 }
 .Circulo__form--buttons{
     display: flex;
@@ -291,26 +325,22 @@ ul.tabs li a:hover{
 }
 .Circulo__form--buttons button{
     width: 49%;
-    font-size: 4vw;
+    font-size: 2.4rem;
     background-color: transparent;
-    color: white;
-    border-color: orange;
+    color: #eaf4e6;
+    border-color: #0CB7F2;
     border-radius: 0.5vw;
 }
 .Circulo__form--buttons button:hover{
     background-color: rgba(255, 166, 0, 0.507);
 }
 .Circulo__form--buttons button:active{
-    background-color: orange;
-    color: black;
-}
-.Circulo__form p{
-    margin: 2px 0;
-    border: 2px solid;
-    background-color: orange;
+    background-color: #1a81d1;
     color: black;
 }
 /*Fin Formulario Circulo*/
+
+/*Estilizaciones faltantes*/
 
 
 /*Comienzo Formulario Taller 2*/
@@ -318,19 +348,21 @@ ul.tabs li a:hover{
     display: block;
     justify-content: center;
     text-align: center;
-    border: 2px solid orange;
+    border: 1px solid #0CB7F2;
+    /* border: 1px solid #0CB7F2; */
     margin-top: 2.5vh;
-    font-size: 4vw;
+    margin-bottom: 2.5vh;
+    font-size: 2.4rem;
     padding: 2.5vw;
 }
 
 .TallerJS2__form input{
     text-align: center;
-    font-size: 4vw;
+    font-size: 2.4rem;
     background-color: transparent;
     margin-bottom: 1vw;
-    color: white;
-    border: 2px solid orange;
+    color: #eaf4e6;
+    border: 1px solid #0CB7F2;
 }
 .TallerJS2__form--input1{
     display: flex;
@@ -347,10 +379,10 @@ ul.tabs li a:hover{
 
 .TallerJS2__form--button{
     width: 100%;
-    font-size: 4vw;
+    font-size: 2.4rem;
     background-color: transparent;
-    color: white;
-    border-color: orange;
+    color: #eaf4e6;
+    border-color: #0CB7F2;
     border-radius: 0.5vw;
     margin-bottom: 2vh;
 }
@@ -358,26 +390,190 @@ ul.tabs li a:hover{
     background-color: rgba(255, 166, 0, 0.486);
 }
 .TallerJS2__form--button:active{
-    background-color: orange;
+    background-color: #1a81d1;
     color: black;
 }
 .TallerJS2__form--resultado{
     margin: 0;
-    background-color: orange;
+    background-color: #1a81d1;
+    color: white;
+    background-color: #48ff00b2;
+    font-size: 1rem;
+}
+.precio placeholder{
+    color:blue;
+}
+.tabs2{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    font-size: 2rem;
+    align-items: flex-end;
+    text-align: center;
+}
+
+/*Comienzo Taller 3*/
+
+.TallerJS{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.Promedio__form{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #0CB7F2;
+    /* border: 1px solid #0CB7F2; */
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    font-size: 2rem;
+    padding: 0.5vw;
+    width: max-content;
+    border-radius: 0.5rem;
+}
+
+.Promedio__form input{
+    text-align: center;
+    font-size: 2.4rem;
+    background-color: transparent;
+    margin-bottom: 1vw;
+    color: #eaf4e6;
+    border: 1px solid #0CB7F2;
+}
+/* .Promedio__form--input{
+    display: flex;
+    justify-content: space-between;
+} */
+.Promedio__form--input:focus{
+    outline: none;
+}
+
+.Promedio__form--button{
+    width: 100%;
+    font-size: 2rem;
+    background-color: transparent;
+    color: #eaf4e6;
+    border-color: #0CB7F2;
+    border-radius: 0.5vw;
+    margin-bottom: 2vh;
+    width: max-content;
+}
+.Promedio__form--button:hover{
+    background-color: rgba(255, 166, 0, 0.486);
+}
+.Promedio__form--button:active{
+    background-color: green;
     color: black;
+}
+.Promedio__form--resultado{
+    margin: 0px;
+    padding: 0.01rem;
+    background-color: #1a81d1;
+    color: white;
 }
 
 
+.Media__form{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #0CB7F2;
+    /* border: 1px solid #0CB7F2; */
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    font-size: 2rem;
+    padding: 0.5vw;
+    width: max-content;
+    border-radius: 0.5rem;
+}
 
+.Media__form input{
+    text-align: center;
+    font-size: 2.4rem;
+    background-color: transparent;
+    margin-bottom: 1vw;
+    color: #eaf4e6;
+    border: 1px solid #0CB7F2;
+}
+.Media__form--input:focus{
+    outline: none;
+}
 
+.Media__form--button{
+    width: 100%;
+    font-size: 2rem;
+    background-color: transparent;
+    color: #eaf4e6;
+    border-color: #0CB7F2;
+    border-radius: 0.5vw;
+    margin-bottom: 2vh;
+    width: max-content;
+}
+.Media__form--button:hover{
+    background-color: rgba(255, 166, 0, 0.486);
+}
+.Media__form--button:active{
+    background-color: green;
+    color: black;
+}
+.Media__form--resultado{
+    margin: 0px;
+    padding: 0.01rem;
+    background-color: #1a81d1;
+    color: white;
+}
 
+.Moda__form{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #0CB7F2;
+    /* border: 1px solid #0CB7F2; */
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    font-size: 2rem;
+    padding: 0.5vw;
+    width: max-content;
+    border-radius: 0.5rem;
+    
+}
 
+.Moda__form input{
+    text-align: center;
+    font-size: 2.4rem;
+    background-color: transparent;
+    margin-bottom: 1vw;
+    color: #eaf4e6;
+    border: 1px solid #0CB7F2;
+}
+.Moda__form--input:focus{
+    outline: none;
+}
 
-
-
-
-
-
+.Moda__form--button{
+    width: 100%;
+    font-size: 2rem;
+    background-color: transparent;
+    color: #eaf4e6;
+    border-color: #0CB7F2;
+    border-radius: 0.5vw;
+    margin-bottom: 2vh;
+    width: max-content;
+}
+.Moda__form--button:hover{
+    background-color: rgba(255, 166, 0, 0.486);
+}
+.Moda__form--button:active{
+    background-color: green;
+    color: black;
+}
+.Moda__form--resultado{
+    margin: 0px;
+    padding: 0.01rem;
+    background-color: #1a81d1;
+    color: white;
+}
 
 
 
@@ -397,34 +593,36 @@ ul.tabs li a:hover{
 
 
 /* Footer */
-
-footer ul{
+footer{
     display: flex;
-    margin: 10px;
-}
-
-footer ul li{
-    display: flex;
-    /* justify-content: space-between; */
-    /* flex-wrap: nowrap; */
-    margin-left: 10px;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
-footer ul img {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
+footer h2{
+    font-size: 2.4rem;
 }
-footer ul p{
-    font-size: 14px;
-    margin-right: 10px;
+footer div{
+    flex-direction: row;
+    font-size: 2rem;
+    width: 100%;
+}
+footer img{
+    width: 2rem;
+    height: 2rem;
+}
+footer p{
+    margin: 0;
+    margin-left: 1.2rem;
+}
+footer li{
+    display: flex;
+    text-align: center;
+    list-style: none;
 }
 footer a{
     text-decoration: none;
     color: white;
-}
-footer a:hover{
-    color : cyan;
 }
 
 @media screen and (max-width: 700px){

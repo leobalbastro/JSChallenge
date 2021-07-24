@@ -3,11 +3,14 @@
     donde poner los proyectos sin importar la coherencia.*/
     /* Visibilidad de secciones */
 
-    // const ocultar1 = document.getElementById("TallerJS1");
-    // const ocultar2 = document.getElementById("TallerJS2");
-    console.log(document.getElementById("tabs"))
+    const ocultar1 = document.getElementById("TallerJS1");
+    const ocultar2 = document.getElementById("TallerJS2");
+    const ocultar3 = document.getElementById("TallerJS3");
+    // console.log(document.getElementById("tabs"))
     ocultar1.style.display = "none";
     ocultar2.style.display = "none";
+    ocultar3.style.display = "none";
+    
 
 
     /* Funciones Aritmeticas */
@@ -76,13 +79,6 @@
         parrafo.innerText = resultado;
     }
 
-
-
-
-
-
-
-    
     //TO-DO
     // getPromedio
     function getPromedio(){
@@ -101,5 +97,121 @@
     }
         
     // getMedia
+    function getMedia(){
+        const input = document.getElementById("Media__form--input").value;
+        listaInput = input.split(",")
+        console.log(listaInput);
+        const nuevaLista = listaInput.sort((a, b) => a - b);
+        console.log(nuevaLista);
+        const mitadLista = parseInt(nuevaLista.length/2);
+        console.log(mitadLista);
+    
+        const esPar = (numerito) => numerito%2==0 ? true : false; 
+        console.log(esPar);
+        
+        const devuelveMedia = (nuevaLista) => esPar(nuevaLista.length) ? (parseInt(nuevaLista[mitadLista-1])+parseInt(nuevaLista[mitadLista])) : nuevaLista[mitadLista];
+        console.log(devuelveMedia);
+        
+        console.log(devuelveMedia(nuevaLista));
+        const texto = document.getElementById("Media__form--result");
+        texto.innerText = `La media de los valores ingresados es de ${devuelveMedia(nuevaLista)} unidades.`
+    }   
 
     // getModa
+    function getModa(){
+        const input = document.getElementById("Moda__form--input").value;
+        const lista = input.split(",");
+        const lista1count ={};
+        lista.map(
+            function(elemento){
+                lista1count[elemento] ? lista1count[elemento] += 1 : lista1count[elemento] = 1 ;
+            }
+        )
+        const listaArray=Object.entries(lista1count).sort(function(valorAcumulado,nuevoValor){
+            return (valorAcumulado[1]-nuevoValor[1]);
+        });
+        
+        const moda = listaArray[listaArray.length-1][0];
+        // console.log(moda);
+        
+        const texto = document.getElementById("Moda__form--result");
+        texto.innerText = `El valor de moda es ${moda}.`
+    }
+
+    //Display Menu Selected Figures
+    function ShowSelectedFigure(){
+        ocultar2.style.display ="none";
+        ocultar3.style.display = "none";
+        const figureSelector = document.getElementById("Figures__selector");
+        const valueSelector = figureSelector.options[figureSelector.selectedIndex].text;
+        const figureCuadrado = document.getElementById("Cuadrado");
+        const figureTriangulo = document.getElementById("Triangulo");
+        const figureCirculo = document.getElementById("Circulo"); 
+        ocultar1.style.display = "flex";
+
+        if (valueSelector == figureCuadrado.id){
+            const Cuadrado = document.getElementById("Cuadrado");
+            Cuadrado.style.display="flex";
+            const Circulo = document.getElementById("Circulo");
+            Circulo.style.display ="none";
+            const Triangulo = document.getElementById("Triangulo");
+            Triangulo.style.display ="none";
+        }else if (valueSelector == figureTriangulo.id){
+            const Cuadrado = document.getElementById("Cuadrado");
+            Cuadrado.style.display="none";
+            const Circulo = document.getElementById("Circulo");
+            Circulo.style.display ="none";
+            const Triangulo = document.getElementById("Triangulo");
+            Triangulo.style.display ="flex";
+        }else if (valueSelector == figureCirculo.id){
+            const Cuadrado = document.getElementById("Cuadrado");
+            Cuadrado.style.display="none";
+            const Circulo = document.getElementById("Circulo");
+            Circulo.style.display ="flex";
+            const Triangulo = document.getElementById("Triangulo");
+            Triangulo.style.display ="none";
+        }
+    }
+    //Display menu TallerJS2
+    function ShowWorkshop2(){
+        ocultar1.style.display="none";
+        ocultar3.style.display="none";
+        ocultar2.style.display="flex";
+
+    }
+
+
+
+    //Display Menu Taller3JS
+    function ShowSelectedOption(){
+        ocultar2.style.display ="none";
+        ocultar1.style.display ="none";
+        ocultar3.style.display = "flex";
+        const menuSelector = document.getElementById("Taller3__selector");
+        const optionSelector = menuSelector.options[menuSelector.selectedIndex].text;
+        const promedioSelector = document.getElementById("Promedio");
+        const mediaSelector = document.getElementById("Media");
+        const modaSelector = document.getElementById("Moda");
+        console.log(optionSelector);
+        console.log(promedioSelector);
+        if (optionSelector == promedioSelector.id){
+            promedioSelector.style.display = "flex";
+            mediaSelector.style.display = "none";
+            modaSelector.style.display = "none";
+        }else if (optionSelector == mediaSelector.id){
+            ocultar3.style.display = "flex";
+            promedioSelector.style.display = "none";
+            mediaSelector.style.display = "flex";
+            modaSelector.style.display = "none";
+        }else if (optionSelector == modaSelector.id){
+            ocultar3.style.display = "flex";
+            promedioSelector.style.display = "none";
+            mediaSelector.style.display = "none";
+            modaSelector.style.display = "flex";
+        }
+
+
+
+    }
+
+    //figureSelector.options[figureSelector.selectedIndex].text;

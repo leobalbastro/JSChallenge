@@ -4,34 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/Index.css">
     <title>Main Project</title>
 </head>
 <body>
     <!-- Aquí va el header que contendrá un logo de platzi argentina junto con el nombre del proyecto.-->
     <header>
         <div class="Logo"> <img src="../resources/platzi-arg-4.png" alt="Logo de platzi Argentina"> <p>Master Project de Leonardo Balbastro</p></div>
-        <!-- <div class="subLogo"></div> -->
+        <!-- <div class="subLogo">Un proyecto para JSChallenge <img src="" alt=""></div> -->
     </header>
-
 <!-- Aquí va el body que contendrá el contenido principal de lo que se realizará, principalmente en este proyecto-->
     <section class="mainContent">
         <div class="wrap">
             <ul class="tabs">
-                <li><a href="#TallerJS1"><span class="fa fa-figures"><span class="tab-text">Figuras Geometricas</span></span></a></li>
-                <li><a href="#TallerJS2"><span class="fa fa-discount"><span class="tab-text">Precios con cupones de descuentos</span></span></a></li>
-                <li><a href="#TallerJS3"><span class="fa fa-promedio"><span class="tab-text">Promedio, Media y Moda</span></span></a></li>
+                <select name="" id="Figures__selector" class="Figures__selector" onchange="ShowSelectedFigure()">
+                    <option value="Taller1" selected style="display:none;">Figuras Geometricas</option>
+                    <option value="Cuadrado">Cuadrado</option>
+                    <option value="Triangulo">Triangulo</option>
+                    <option value="Circulo">Circulo</option>
+                </select>
+                <!-- <li><a href="#TallerJS1"><span class="fa fa-figures"><span class="tab-text"></span>Figuras Geometricas</span></span></a></li> -->
+                <li><a href="#TallerJS2" onclick="ShowWorkshop2()">Precios con cupones de descuentos</a></li>
+                
+                <select name="" id="Taller3__selector" onchange="ShowSelectedOption()">
+                    <option value="Taller3" selected style="display:none;">Promedio, Media y Moda</option>
+                    <option value="Promedio">Promedio</option>
+                    <option value="Media">Media</option>
+                    <option value="Moda">Moda</option>
+                </select>
+                <!-- <li><a href="#TallerJS3"><span class="fa fa-promedio"><span class="tab-text">Promedio, Media y Moda</span></span></a></li> -->
                 <!-- <li><a href="#Media"><span class="fa fa-media"><span class="tab-text">Media Aritmetica</span></span></a></li>
                 <li><a href="#Moda"><span class="fa fa-moda"><span class="tab-text">Moda</span></span></a></li> -->
             </ul>
             <div class="secciones" id="secciones">
                 <article id="TallerJS1" class="TallerJS">
-                    <!-- <h2>Figuras</h2> -->
+                    <!-- <h2>Figuras</h2>
                     <ul class="tabs__figures">
-                        <li><a href="#Cuadrado"><span class="fa fa-Rectangulo"><span class="tab-text">Rectangulo</span></span></a></li>
-                        <li><a href="#Triangulo"><span class="fa fa-Triangulo"><span class="tab-text">Triangulo</span></span></a></li>
-                        <li><a href="#Circulo"><span class="fa fa-Circulo"><span class="tab-text">Circulo</span></span></a></li>
-                    </ul>
+                        <div class="link" id="link"><a href="#Cuadrado">Cuadrado</a></div>
+                        <div class="link" id="link"><a href="#Triangulo">Triangulo</a></div>
+                        <div class="link" id="link"><a href="#Circulo">Circulo</a></div>
+                    </ul> -->
                     <div>
                         <article id="Cuadrado" class="Cuadrado">
                             <!-- <h3>Cuadrado</h3> -->
@@ -44,7 +55,7 @@
                                     <button type="button" onclick="CalcularPerimetroCuadrado()">Calcular Perimetro</button>
                                     <button type="button" onclick="CalcularAreaCuadrado()">Calcular Area</button>
                                 </div>                                
-                                <p id="resultadoCuadrado"></p>
+                                <p id="resultadoCuadrado" class="resultadoCuadrado"></p>
                             </form>
                         </article>
                         <article id="Triangulo" class="Triangulo">
@@ -62,7 +73,7 @@
                                     <button type="button" onclick="CalcularAreaTriangulo()">Calcular Area Triangulo</button>
                                     <button type="button" onclick="CalcularPerimetroTriangulo()">Calcular Perimetro Triangulo</button>
                                 </div>
-                                <p id="resultadoTriangulo"></p> 
+                                <p id="resultadoTriangulo" class="resultadoTriangulo"></p> 
                             </form>
                         </article>
                         <article id="Circulo" class="Circulo">
@@ -76,7 +87,7 @@
                                     <button type="button" onclick="PerimetroCirculo()">Perimetro del Circulo</button>
                                     <button type="button" onclick="AreaCirculo()">Area del Circulo</button>
                                 </div>
-                            <p id="resultadoCirculo"></p> 
+                            <p id="resultadoCirculo" class="resultadoCirculo"></p> 
                                 
                             </form>
                         </article>
@@ -86,46 +97,61 @@
                     <form action="" class="TallerJS2__form">
                         <div class="TallerJS2__form--input1">
                             <label for="">Precio: </label>
-                            <Input id="precio" placeholder="Ingrese monto" type="number"></Input>
+                            <Input id="precio" class="precio" type="number"></Input>
                         </div>
                         <div class="TallerJS2__form--input2">
                             <label for="">Cupon:</label>
-                            <Input id="cupon" placeholder="Ingrese Cupon" type="text"></Input>
+                            <Input id="cupon" type="text"></Input>
                         </div>
                         <button id="TallerJS2__form--button" class="TallerJS2__form--button" type="button" onclick="CalcularDescuento()">Calcular precio con descuento</button>
                         <p id="TallerJS2__form--resultado" class="TallerJS2__form--resultado"></p>
                     </form>
                 </article>
                 <article id="TallerJS3" class="TallerJS">
-                    <!-- <h2>Promedio, Media y Moda.</h2> -->
-                    <ul class="tabs">
-                        <li><a href="#Promedio"><span class="fa fa-Promedio"><span class="tab-text">Promedio</span></span></a></li>
-                        <li><a href="#Media"><span class="fa fa-Media"><span class="tab-text">Media</span></span></a></li>
-                        <li><a href="#Moda"><span class="fa fa-Moda"><span class="tab-text">Moda</span></span></a></li>
-                    </ul>                    
+                    <!-- <h2>Promedio, Media y Moda.</h2>
+                    <ul class="tabs2">
+                        <div class="link" id="link"><a href="#Promedio">Promedio</a></div>
+                        <div class="link" id="link"><a href="#Media">Media</a></div>
+                        <div class="link" id="link"><a href="#Moda">Moda</a></div>
+                    </ul>                     -->
                     <article id="Promedio">
-                        <h3>Promedio de una Lista:</h3>
+                        <!-- <h3>Promedio de una Lista:</h3> -->
                         <form action="" class="Promedio__form">
-                            <label for="">Ingrese una lista de numeros separados por coma ","</label>
-                            <input type="text" id="Promedio__form--input" class="Promedio__form--input">
+                            <div class="Promedio__form--inputs">
+                                <label for="">Ingrese una lista de numeros separados por coma ","</label>
+                            </div>
+                            <div>
+                                <input type="text" id="Promedio__form--input" class="Promedio__form--input">
+                            </div>
                             <button type="button" id="Promedio__form--button" class="Promedio__form--button" onclick="getPromedio()">Obtener Promedio</button>
                             <p id="Promedio__form--result" class="Promedio__form--result"></p>
                         </form>
                     </article>
                     <article id="Media">
-                        <h3>Media de una Lista:</h3>
-                        <form action="">
-                            <label for="listaInput">Ingrese una lista de numeros separados por coma ","</label>
-                            <input type="text" id="listaInput">
-                            <button type="button" onclick="getMedia()">Obtener Media</button>
+                        <!-- <h3>Media de una Lista:</h3> -->
+                        <form action="" class="Media__form" id="Media__form">
+                            <div>
+                                <label for="">Ingrese una lista de numeros separados por coma ","</label>       
+                            </div>
+                            <div>
+                                <input type="text" id="Media__form--input" class="Media__form--input">
+                            </div>
+                            <button type="button"  id="Media__form--button" class="Media__form--button" onclick="getMedia()">Obtener Media</button>
+                            <p id="Media__form--result" class="Media__form--result"></p>
                         </form>
                     </article>
                     <article id="Moda">
-                        <h3>Moda de una Lista:</h3>
-                        <form action="">
-                            <label for="listaInput">Ingrese una lista de numeros separados por coma ","</label>
-                            <input type="text" id="listaInput">
-                            <button type="button" onclick="getModa()">Obtener Moda</button>
+                        <!-- <h3>Moda de una Lista:</h3> -->
+                        <form action="" class="Moda__form" id="Moda__form">
+
+                            <div>
+                                <label for="">Ingrese una lista de numeros separados por coma ","</label>
+                            </div>
+                            <div>
+                                <input type="text" id="Moda__form--input">
+                            </div>                            
+                            <button type="button"  id="Moda__form--button" class="Moda__form--button" onclick="getModa()">Obtener Moda</button>
+                            <p id="Moda__form--result" class="Moda__form--result"></p>
                         </form>
                     </article>
                 </article>
@@ -134,14 +160,23 @@
     </section>
     <!--Este es el footer que estará mencionadas las clases que se tomaron a la hora de realizar dicho proyecto,
         Junto con el logo de Platzi (ya que es de ellos) y si le dan click encima los dirigirá a la pagina del curso-->
-    <h2 class="titleFooter">Cursos en los cuales me base para realizar este proyecto:</h2>
     <footer>
+        <h2 class="titleFooter">Cursos en los cuales me base para realizar este proyecto:</h2>
         <ul>
-            <a href="https://platzi.com/clases/frontend-developer/"><li><img src="../resources/badge-frontend-developer-8a49e681-3e22-408d-b886-2f47dfc9953a.png" alt="Curso de Frontend Developer"> <p>Clases del Curso de Frontend Developer</p></li></a>
-            <a href="https://platzi.com/clases/basico-javascript/"><li><img src="../resources/basico_JS.png" alt=" Curso Básico de JavaScript"><p>Clases del Curso Básico de JavaScript</p></li></a>
-            <a href="https://platzi.com/clases/javascript-practico/"><li><img src="../resources/practicoJS.png" alt="Curso Práctico de JavaScript"><p>Clases del Curso Práctico de JavaScript</p></li></a>
+            <div>
+                <a href="https://platzi.com/clases/frontend-developer/"><li><img src="../resources/badge-frontend-developer-8a49e681-3e22-408d-b886-2f47dfc9953a.png" alt="Curso de Frontend Developer"> <p>Clases del Curso de Frontend Developer</p></li></a>
+            </div>
+            <div>
+                <a href="https://platzi.com/clases/javascript-practico/"><li><img src="../resources/practicoJS.png" alt="Curso Práctico de JavaScript"><p>Clases del Curso Práctico de JavaScript</p></li></a>
+            </div>
+            <div>
+                <a href="https://platzi.com/clases/basico-javascript/"><li><img src="../resources/basico_JS.png" alt=" Curso Básico de JavaScript"><p>Clases del Curso Básico de JavaScript</p></li></a>
+
+            </div>
         </ul>
     </footer>
     <script src="../Scripts/Index.js"></script>
+    <link rel="stylesheet" href="../Styles/Index.css">
+
 </body>
 </html>
